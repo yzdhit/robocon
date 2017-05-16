@@ -1,0 +1,1 @@
+-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -I "D:\Program Files\keil4.22\ARM\CMSIS\Include" -I "D:\Program Files\keil4.22\ARM\INC\ST\STM32F4xx" -o "main.o" --omf_browse "main.crf" --depend "main.d" "..\src\main.c"

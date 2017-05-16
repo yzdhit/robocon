@@ -1,0 +1,17 @@
+巡线部分 
+  stDoubleOMNI.fpLastPosX = g_ucLineValue - g_ucLineMidValue;
+					if(abs( stRobot.stPot.ssPosX)<2)
+					{
+						g_ucTaskCnt++;
+					}
+					else
+					{
+					    g_ucTaskCnt = 0;
+					}
+
+					// 在此判定是否跳转
+					if(g_ucTaskCnt>=20)
+					{
+						g_ucJumpRunFlag = 1;
+					}
+纠正角度部分
