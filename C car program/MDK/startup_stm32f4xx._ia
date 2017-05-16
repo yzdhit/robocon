@@ -1,0 +1,1 @@
+--cpu Cortex-M4.fp -g --apcs=interwork -I "D:\Program Files\keil4.22\ARM\CMSIS\Include" -I "D:\Program Files\keil4.22\ARM\INC\ST\STM32F4xx" --list "..\List\startup_stm32f4xx.lst" --xref -o ".\startup_stm32f4xx.o" --depend ".\startup_stm32f4xx.d" "..\src\startup_stm32f4xx.s"

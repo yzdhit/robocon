@@ -1,0 +1,1 @@
+{oCeCoder,oCeGryoUart,oCeKb,oCeJs,oCeServoPwm,oCeMotorPwm,oCeLcd}  = rCeFpga[6:0];

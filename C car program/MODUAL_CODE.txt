@@ -1,0 +1,113 @@
+
+if(stJSValue.usReserved != 0xffff)
+		{
+			//在此添加对应按键的处理
+			if(JS_START(stJSValue.usReserved))
+			{
+				//在此等待按键释放
+				while(stJSValue.usReserved != 0xffff)
+				{
+					stJSValue.usReserved = JOYSTICK_RESERVED;
+				}
+				//在此处理按键后的响应
+				
+			}
+
+switch(g_ucCurModeSel)
+           {
+                      case C_MODE_INIT_0:
+/*---------------初始化模式，用于选择后续的模式-----------------------*/
+
+
+				break;
+			case C_MODE_TEST_SENSOR_1:
+/*---------------测试陀螺、开关、气动、手柄-----------------------------*/
+
+				break;
+			case C_MODE_TEST_CODER_2:
+/*---------------测试码盘---------------------------------------------------------*/
+
+				break;
+			case C_MODE_TEST_LINE_3:
+/*---------------测试巡线---------------------------------------------------------*/
+
+
+				break;
+			case C_MODE_CAL_GYRO_4:
+/*---------------标定陀螺---------------------------------------------------------*/
+
+
+				break;
+			case C_MODE_MANUAL_5:
+/*---------------手动控制---------------------------------------------------------*/
+
+
+
+				break;
+			case C_MODE_LOW_SPEED_6:
+/*---------------自动低速模式---------------------------------------------------*/
+
+
+
+
+				break;
+			case C_MODE_MID_SPEED_7:
+/*---------------自动中速模式---------------------------------------------------*/
+
+
+
+
+				break;
+			case C_MODE_TOP_SPEED_8:
+/*---------------自动高速模式---------------------------------------------------*/
+
+
+
+				break;
+			default:
+				break;
+           }
+
+
+
+                                if(g_ucOnceRunFlag == 0)
+				{
+                                   g_ucOnceRunFlag = 1;
+					//在此添加只执行一次的代码,  要确认各个电机的状态
+					
+				}
+
+				if(g_ucLoopRunFlag == 1)
+				{
+					// 在此添加循环执行代码
+
+
+					// 在此判定是否跳转
+
+
+					
+				}
+
+
+				if(g_ucJumpRunFlag == 1)
+				{
+                                    g_ucLoopRunFlag = 0;
+					// 在此添加跳转代码在此要清除RunFlag、清除计数和定时,并且作单步及连续跳转判定
+					if(JS_L1(JOYSTICK_RESERVED) || g_ucAllContinueFlag == 1)
+					{
+
+						g_ucOnceRunFlag = 0;
+						g_ucLoopRunFlag = 1;
+						g_ucJumpRunFlag = 0;
+                                                g_ucTaskCnt = 0;
+						g_uiTaskTime1 = 0;
+						g_uiTaskTime2 = 0;
+						g_siTaskDeltaTime = 0;
+						//进行跳转的操作
+					}
+				}
+				
+
+
+
+
